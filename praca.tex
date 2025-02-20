@@ -1,0 +1,164 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[slovak]{babel}
+\usepackage{mathptmx}
+\usepackage{graphicx}
+\graphicspath{{obrazky/}}
+\usepackage[a4paper,
+            left=3.5cm,
+            right=2.5cm,
+            top=2.5cm,
+            bottom=2.5cm]{geometry}
+
+\input{packages.tex}
+
+\usepackage{subfiles} % better left last
+
+\linespread{1.5}
+\AddToHook{cmd/section/before}{\clearpage}
+
+% TODO: move
+\def\skola{Gymnázium\\Veľká okružná 22, 010 01 Žilina}
+
+\def\nazovprace{\LaTeX \space šablóna práce SOČ}
+\def\autorprace{Autor Pracovitý}
+\def\cisloodboru{11}
+\def\skolitel{Najlepší školiteľ na svete}
+
+\def\rocnikstudia{4}
+\def\mesto{Žilina}
+\def\rokdokoncenia{2025}
+% TODO: end move
+
+\begin{document}
+
+% Obal práce
+\begin{titlepage}
+    \centering
+
+    \skola
+
+    \vspace{6cm}
+    \Huge \nazovprace
+
+    \vspace{1.13cm}
+    \Large Stredoškolská odborná činnosť
+
+    \vspace{2.12cm}
+    \normalsize Č. odboru: \cisloodboru
+
+    \vfill
+
+    \begin{minipage}{0.75\textwidth}
+        Riešiteľ: \autorprace \par
+        Ročník štúdia: \rocnikstudia.
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.23\textwidth}
+        \hfil % basically align right
+        \begin{tabular}{rc}
+            Mesto: & \mesto \\
+            Rok:   & \rokdokoncenia
+        \end{tabular}
+    \end{minipage}
+\end{titlepage}
+
+% Titulný list
+\begin{titlepage}
+    \centering
+    Gymnázium \\
+    Veľká okružná 22, 010 01 Žilina
+
+    \vspace{7cm}
+    \Huge \nazovprace
+
+    \vspace{1.13cm}
+    \Large Stredoškolská odborná činnosť
+
+    \vspace{2.12cm}
+    \normalsize Č. odboru: 11
+
+    \vfill
+
+    \begin{minipage}{0.75\textwidth}
+        Riešiteľ: \autorprace \par
+        Ročník štúdia: \rocnikstudia. \par
+        Školiteľ: \skolitel \par
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.23\textwidth}
+        \hfil % basically align right
+        \begin{tabular}{rc}
+            \\
+            Mesto: & \mesto \\
+            Rok:   & \rokdokoncenia
+        \end{tabular}
+    \end{minipage}
+\end{titlepage}
+
+\setcounter{page}{2}
+
+\null
+\vfill
+\thispagestyle{empty}
+
+\noindent
+\textbf{Čestné vyhlásenie} % povinné
+
+\input{cestne_vyhlasenie}
+
+\vspace{6cm}
+\newpage
+
+\null
+\vfill
+
+\noindent
+\textbf{Poďakovanie} % nepovinné
+
+\input{podakovanie.tex}
+
+\vspace{6cm}
+
+\tableofcontents
+
+% TODO:
+% \section{Zoznam skratiek, značiek a symbolov} % nepovinné
+% \thispagestyle{empty}
+
+% TODO:
+% \section{Zoznam tabuliek, grafov a ilustrácií} % nepovinné
+% \thispagestyle{empty}
+
+\section{Úvod}
+\subfile{kapitoly/uvod.tex}
+
+\section{Problematika a prehľad literatúry}
+\subfile{kapitoly/problematika_a_prehlad_literatury.tex}
+
+\section{Ciele práce}
+\subfile{kapitoly/ciele_prace.tex}
+
+\section{Materiál a metodika}
+\subfile{kapitoly/material_a_metodika.tex}
+
+\section{Výsledky práce}
+\subfile{kapitoly/vysledky_prace.tex}
+
+\section{Diskusia}
+\subfile{kapitoly/diskusia.tex}
+
+\section{Závery práce}
+\subfile{kapitoly/zavery_prace.tex}
+
+\section{Zhrnutie}
+\subfile{kapitoly/zhrnutie.tex}
+
+% TODO:
+\section{Zoznam použitej literatúry}
+\thispagestyle{empty}
+
+% TODO:
+% \section{Prílohy} % nepovinné
+% \thispagestyle{empty}
+
+\end{document}

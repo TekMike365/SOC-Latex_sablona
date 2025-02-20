@@ -1,0 +1,10 @@
+\babel@toc {slovak}{}\relax 
+\contentsline {section}{\numberline {1}Úvod}{5}{}%
+\contentsline {section}{\numberline {2}Problematika a prehľad literatúry}{6}{}%
+\contentsline {section}{\numberline {3}Ciele práce}{7}{}%
+\contentsline {section}{\numberline {4}Materiál a metodika}{8}{}%
+\contentsline {section}{\numberline {5}Výsledky práce}{9}{}%
+\contentsline {section}{\numberline {6}Diskusia}{10}{}%
+\contentsline {section}{\numberline {7}Závery práce}{11}{}%
+\contentsline {section}{\numberline {8}Zhrnutie}{12}{}%
+\contentsline {section}{\numberline {9}Zoznam použitej literatúry}{13}{}%
