@@ -43,7 +43,8 @@ else:
         rcpath = ROOT + path + "/.latexmkrc"
         print(rcpath)
         with open(rcpath, "w") as f:
-            f.write(f"$out_dir = \"{ROOT + path + '/build'}\"")
+            print(f"$out_dir = \"{ROOT + path + '/build'}\";", file=f)
+            print(f"$pdf_mode = 1;", file=f)
 
 print("done.")
 
