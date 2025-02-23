@@ -11,6 +11,11 @@
             bottom=2.5cm]{geometry}
 \usepackage{tabularx}
 
+\usepackage{csquotes}
+\usepackage[backend=biber,
+            style=iso-authoryear]{biblatex}
+\addbibresource{literatura.bib}
+
 \input{packages.tex}
 
 \usepackage{subfiles} % better left last
@@ -145,7 +150,10 @@
 \subfile{kapitoly/zhrnutie.tex}
 
 % TODO:
-\section{Zoznam použitej literatúry}
+%\section{Zoznam použitej literatúry}
+
+\nocite{*}
+\printbibliography
 \thispagestyle{empty}
 
 % TODO:
