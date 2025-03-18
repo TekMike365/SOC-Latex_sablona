@@ -1,5 +1,6 @@
 \documentclass[12pt,a4paper]{article}
 \usepackage[slovak]{babel}
+\usepackage[T1]{fontenc}
 \usepackage{mathptmx}
 \usepackage{graphicx}
 \graphicspath{{obrazky/}}
@@ -8,6 +9,12 @@
             right=2.5cm,
             top=2.5cm,
             bottom=2.5cm]{geometry}
+\usepackage{tabularx}
+
+\usepackage{csquotes}
+\usepackage[backend=biber,
+            style=iso-authoryear]{biblatex}
+\addbibresource{literatura.bib}
 
 \input{packages.tex}
 
@@ -45,7 +52,7 @@
     \begin{minipage}{0.23\textwidth}
         \hfil % basically align right
         \begin{tabular}{rc}
-            Mesto: & \mesto \\
+            Mesto: & \mesto         \\
             Rok:   & \rokdokoncenia
         \end{tabular}
     \end{minipage}
@@ -77,7 +84,7 @@
         \hfil % basically align right
         \begin{tabular}{rc}
             \\
-            Mesto: & \mesto \\
+            Mesto: & \mesto         \\
             Rok:   & \rokdokoncenia
         \end{tabular}
     \end{minipage}
@@ -142,7 +149,10 @@
 \subfile{kapitoly/zhrnutie.tex}
 
 % TODO:
-\section{Zoznam použitej literatúry}
+%\section{Zoznam použitej literatúry}
+
+\nocite{*}
+\printbibliography
 \thispagestyle{empty}
 
 % TODO:
